@@ -22,6 +22,10 @@ public class Teleport : MonoBehaviour
     private float blackInTime = 0.0f;
     private float blackOutTimeNeeded = 0.1f;
 
+
+    public delegate void TeleportEvent();
+    public static event TeleportEvent OnTeleport;
+
     private void Start() {
         lineRenderer.enabled = false;
     }
@@ -76,6 +80,7 @@ public class Teleport : MonoBehaviour
         blackIn = true;
         if (hit.rigidbody != null) {
             transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+            OnTeleport();
         }
     }
 
