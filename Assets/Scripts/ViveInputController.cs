@@ -203,8 +203,8 @@ public class ViveInputController : MonoBehaviour {
 
     private void UpdateRightControllerTouchPadPressUpEvent() {
         if (Input.GetButtonUp("RightControllerTrackpadPress")) {
-            if (OnButtonTouchUpRightTouchPad != null) {
-                OnButtonTouchUpRightTouchPad();
+            if (OnButtonPressUpRightTouchPad != null) {
+                OnButtonPressUpRightTouchPad();
             }
         }
     }
