@@ -42,7 +42,26 @@ public enum ItemNameEnum {
     Cheese,
     Cucumber,
     Eggplant,
-    Garlic
+    Garlic,
+    IceCream,
+    Lemon,
+    Meat,
+    Melon,
+    Mushroom,
+    Onion,
+    Orange,
+    Chips,
+    Coffee,
+    Pasta,
+    Papaya,
+    Pear,
+    Pepper,
+    Pineapple,
+    Potato,
+    Pumpkin,
+    Squash,
+    Tomato,
+    Watermelon
 }
 
 public enum ItemTypeEnum {
@@ -53,7 +72,8 @@ public enum ItemTypeEnum {
     Sweet,
     Cleaning,
     Protein,
-    Dairy
+    Dairy,
+    Snack
 }
 
 public class Item : MonoBehaviour

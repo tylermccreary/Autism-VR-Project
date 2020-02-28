@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 0
   itemType: 1
+  specific: 0
 --- !u!54 &72371078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 0
   itemType: 1
+  specific: 0
 --- !u!54 &177056422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -701,6 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 0
   itemType: 1
+  specific: 0
 --- !u!1 &464695798
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 0
   itemType: 1
+  specific: 0
 --- !u!54 &677568966
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1464,6 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 0
   itemType: 1
+  specific: 0
 --- !u!54 &1246923729
 Rigidbody:
   m_ObjectHideFlags: 0
