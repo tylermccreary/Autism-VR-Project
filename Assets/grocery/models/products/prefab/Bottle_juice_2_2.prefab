@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33704839488369600}
   - component: {fileID: 23430838621092938}
   - component: {fileID: 5263912641274197255}
+  - component: {fileID: -2104504579904347186}
+  - component: {fileID: -7581671626621261613}
   m_Layer: 0
   m_Name: Bottle_juice_2_2
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 5
   itemType: 0
   specific: 2
+--- !u!54 &-2104504579904347186
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937680608782904}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-7581671626621261613
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937680608782904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300048, guid: 9aa4803744f40b64581e6f5dba8f54d5, type: 3}

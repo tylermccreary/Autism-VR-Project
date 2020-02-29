@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33332493077410660}
   - component: {fileID: 23392998363971680}
   - component: {fileID: 1366221468067065544}
+  - component: {fileID: 3199802493120786358}
+  - component: {fileID: 1873540483958973880}
   m_Layer: 0
   m_Name: Can_soda_5
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 5
   itemType: 0
   specific: 0
+--- !u!54 &3199802493120786358
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688592787991882}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1873540483958973880
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688592787991882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300030, guid: 9992266158181a74e8b285e11aa8e11a, type: 3}

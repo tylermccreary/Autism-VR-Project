@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33785114324568034}
   - component: {fileID: 23382350237137690}
   - component: {fileID: 4923362381920081398}
+  - component: {fileID: 3027313161714797866}
+  - component: {fileID: -2484302231103314193}
   m_Layer: 0
   m_Name: Box_wash_1_4
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 12
   itemType: 5
   specific: 4
+--- !u!54 &3027313161714797866
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983231112218236}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-2484302231103314193
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983231112218236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300066, guid: 812373a50a2e00f4fa0c279f80c862e7, type: 3}

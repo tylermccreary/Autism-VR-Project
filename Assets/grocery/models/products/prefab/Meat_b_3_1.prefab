@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33661655566275704}
   - component: {fileID: 23871085452641632}
   - component: {fileID: 4448639527026932895}
+  - component: {fileID: -3192957004782370251}
+  - component: {fileID: -5452775361000890017}
   m_Layer: 0
   m_Name: Meat_b_3_1
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 27
   itemType: 6
   specific: 0
+--- !u!54 &-3192957004782370251
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771687460781992}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-5452775361000890017
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771687460781992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300014, guid: 50625afa7d82e0b4ba7f868c623eaa08, type: 3}

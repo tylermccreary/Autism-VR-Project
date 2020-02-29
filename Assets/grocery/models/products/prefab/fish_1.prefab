@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33544122424055318}
   - component: {fileID: 23821588819334920}
   - component: {fileID: 7259050395631157524}
+  - component: {fileID: 6172245399225975955}
+  - component: {fileID: -8738566727141822359}
   m_Layer: 0
   m_Name: fish_1
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 17
   itemType: 6
   specific: 0
+--- !u!54 &6172245399225975955
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613383992036910}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-8738566727141822359
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613383992036910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300012, guid: 067438823fd64654492c1c6959243477, type: 3}

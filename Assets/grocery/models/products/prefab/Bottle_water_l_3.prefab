@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33731755732115024}
   - component: {fileID: 23350653028190572}
   - component: {fileID: 7679838336968637329}
+  - component: {fileID: -1949428675235368123}
+  - component: {fileID: -7610963659572652785}
   m_Layer: 0
   m_Name: Bottle_water_l_3
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 8
   itemType: 0
   specific: 0
+--- !u!54 &-1949428675235368123
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781108147324406}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-7610963659572652785
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781108147324406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300076, guid: 9aa4803744f40b64581e6f5dba8f54d5, type: 3}

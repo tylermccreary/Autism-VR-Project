@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33116944053559198}
   - component: {fileID: 23646299974593902}
   - component: {fileID: 6375173663390028770}
+  - component: {fileID: 3553596005480829811}
+  - component: {fileID: -4997346864404789888}
   m_Layer: 0
   m_Name: Box_milk_2_1
   m_TagString: Untagged
@@ -93,3 +95,33 @@ MonoBehaviour:
   name: 7
   itemType: 0
   specific: 0
+--- !u!54 &3553596005480829811
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001424701435140}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-4997346864404789888
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001424701435140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300010, guid: 812373a50a2e00f4fa0c279f80c862e7, type: 3}

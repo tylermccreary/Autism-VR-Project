@@ -25,6 +25,8 @@ public class Teleport : MonoBehaviour
 
     public delegate void TeleportEvent();
     public static event TeleportEvent OnTeleport;
+    public delegate void PrepareForTeleportEvent();
+    public static event PrepareForTeleportEvent OnPrepareForTeleport;
 
     private void Start() {
         lineRenderer.enabled = false;
@@ -70,6 +72,7 @@ public class Teleport : MonoBehaviour
         lineRenderer.enabled = false;
         teleport = false;
         blackOut = true;
+        OnPrepareForTeleport();
         StartCoroutine(ExecuteTeleportation());
     }
 
