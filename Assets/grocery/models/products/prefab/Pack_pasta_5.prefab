@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 33007243074427182}
   - component: {fileID: 23866530065291084}
   - component: {fileID: 385370231608835632}
-  - component: {fileID: 805975083401506577}
-  - component: {fileID: 875590643925572187}
   m_Layer: 0
   m_Name: Pack_pasta_5
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,33 +93,3 @@ MonoBehaviour:
   name: 34
   itemType: 3
   specific: 0
---- !u!54 &805975083401506577
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032901900196790}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &875590643925572187
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032901900196790}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300052, guid: a4f8db10431db4443b0fefde91d1a2e0, type: 3}

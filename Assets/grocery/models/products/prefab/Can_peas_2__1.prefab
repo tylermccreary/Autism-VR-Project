@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 33958719499590368}
   - component: {fileID: 23406541368509532}
   - component: {fileID: 3228252713948380264}
-  - component: {fileID: 5391620061038696684}
-  - component: {fileID: -3451555829507017562}
   m_Layer: 0
   m_Name: Can_peas_2__1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,33 +93,3 @@ MonoBehaviour:
   name: 18
   itemType: 2
   specific: 0
---- !u!54 &5391620061038696684
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433725347264790}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &-3451555829507017562
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433725347264790}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300042, guid: 9992266158181a74e8b285e11aa8e11a, type: 3}

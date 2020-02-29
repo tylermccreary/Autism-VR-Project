@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 33217970216696714}
   - component: {fileID: 23328075381352858}
   - component: {fileID: 175481181115203824}
-  - component: {fileID: 1769968650818684680}
-  - component: {fileID: -2700310121769052925}
   m_Layer: 0
   m_Name: Bottle_milk_l_1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -95,33 +93,3 @@ MonoBehaviour:
   name: 7
   itemType: 0
   specific: 0
---- !u!54 &1769968650818684680
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266535738330918}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &-2700310121769052925
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266535738330918}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300022, guid: 9aa4803744f40b64581e6f5dba8f54d5, type: 3}

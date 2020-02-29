@@ -19,7 +19,6 @@ public class CartItemTracker : MonoBehaviour
         if (item != null) {
             items.Add(item);
         }
-        Debug.Log(items.Count);
     }
 
     private void OnTriggerExit(Collider other) {
@@ -27,6 +26,5 @@ public class CartItemTracker : MonoBehaviour
         if (item != null) {
             items.Remove(item);
         }
-        Debug.Log(items.Count);
     }
 }

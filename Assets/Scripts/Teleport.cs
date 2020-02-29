@@ -54,8 +54,8 @@ public class Teleport : MonoBehaviour
     private void UpdateTeleportLineRenderer() {
         if (teleport) {
             Ray ray = new Ray(rightController.transform.position, -rightController.transform.up);
-            if (Physics.Raycast(ray, out hit)) {
-                if (hit.rigidbody != null) {
+            if (Physics.Raycast(ray, out hit, 20, layerMask)) {
+                if (hit.transform != null) {
                     lineRenderer.enabled = true;
                     lineRenderer.SetPosition(0, rightController.transform.position);
                     lineRenderer.SetPosition(1, hit.point);
@@ -81,7 +81,8 @@ public class Teleport : MonoBehaviour
         blackOut = false;
         blackOutTime = 0.0f;
         blackIn = true;
-        if (hit.rigidbody != null) {
+        if (hit.transform != null) {
+            Debug.Log(hit.point);
             transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
             OnTeleport();
         }

@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 33615511275025680}
   - component: {fileID: 23584390632588198}
   - component: {fileID: 4680654940602270695}
-  - component: {fileID: -3140775453319589384}
-  - component: {fileID: 4185517579810191244}
   m_Layer: 0
   m_Name: Cheese_6_1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,33 +93,3 @@ MonoBehaviour:
   name: 21
   itemType: 7
   specific: 0
---- !u!54 &-3140775453319589384
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382007966034938}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &4185517579810191244
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382007966034938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: c93df88adfd6e274bbf85ff57fe2af0c, type: 3}
