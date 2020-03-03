@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class ItemGrabArea : MonoBehaviour
 {
-    [SerializeField] private Collider collider;
-    [SerializeField] private GameObject prefabToSpawn;
-
+    public GameObject prefabToSpawn;
 }

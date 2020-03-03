@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6729742576150499998}
   m_Layer: 0
   m_Name: Box_tea_1_2
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4680654940602270695}
   m_Layer: 0
   m_Name: Cheese_6_1
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2043824363507028701}
   m_Layer: 0
   m_Name: bread_2
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

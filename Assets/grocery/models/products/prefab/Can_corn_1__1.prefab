@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3037254417261356823}
   m_Layer: 0
   m_Name: Can_corn_1__1
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

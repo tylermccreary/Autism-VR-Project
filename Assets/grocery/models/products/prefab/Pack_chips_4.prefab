@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9138554957367763015}
   m_Layer: 0
   m_Name: Pack_chips_4
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5130496031876305577}
   m_Layer: 0
   m_Name: Pack_pasta_8
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

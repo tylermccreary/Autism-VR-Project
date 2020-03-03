@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7208511808213511541}
   m_Layer: 0
   m_Name: Pack_coffe_2
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

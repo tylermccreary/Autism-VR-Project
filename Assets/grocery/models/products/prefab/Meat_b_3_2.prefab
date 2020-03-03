@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2287227108180708774}
   m_Layer: 0
   m_Name: Meat_b_3_2
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

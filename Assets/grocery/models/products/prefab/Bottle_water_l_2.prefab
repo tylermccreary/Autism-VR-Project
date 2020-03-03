@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8676095685565462386}
   m_Layer: 0
   m_Name: Bottle_water_l_2
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

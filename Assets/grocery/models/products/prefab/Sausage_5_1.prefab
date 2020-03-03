@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8402914672434461148}
   m_Layer: 0
   m_Name: Sausage_5_1
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
