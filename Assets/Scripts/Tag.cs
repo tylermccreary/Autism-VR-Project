@@ -5,4 +5,5 @@ using UnityEngine;
 public static class Tag
 {
     public const string ITEM = "Item";
+    public const string FINGER = "Finger";
 }

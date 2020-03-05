@@ -11,6 +11,13 @@ public class ShoppingListItem : MonoBehaviour
     [SerializeField] private Item item;
     [SerializeField] private int quantity;
     private bool collected;
+    
+    public delegate void ItemClickEvent(Item item);
+    public static event ItemClickEvent OnItemClickEvent;
 
-
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == Tag.FINGER) {
+            OnItemClickEvent(this.item);
+        }
+    }
 }
