@@ -16,7 +16,7 @@ public class ItemGrabArea : MonoBehaviour
         ShoppingListItem.OnItemClickEvent += CheckSign;
     }
 
-    private void CheckSign(Item itemToHighlight) {
+    private void CheckSign(Item itemToHighlight, Transform areaTransform) {
         if (Item.Equals(item, itemToHighlight)) {
             Highlight();
         } else {
@@ -25,16 +25,12 @@ public class ItemGrabArea : MonoBehaviour
     }
 
     private void Highlight() {
-        Debug.Log("Here");
         Material[] list = new Material[1];
         list[0] = highlightMaterial;
         meshRenderer.materials = list;
     }
 
     private void UnHighlight() {
-        if (gameObject.name.Contains("Cabbage")) {
-            Debug.Log("UNDONE");
-        }
         meshRenderer.materials[0] = originalMaterial;
     }
 

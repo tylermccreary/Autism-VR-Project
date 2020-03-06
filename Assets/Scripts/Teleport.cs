@@ -82,7 +82,6 @@ public class Teleport : MonoBehaviour
         blackOutTime = 0.0f;
         blackIn = true;
         if (hit.transform != null) {
-            Debug.Log(hit.point);
             transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
             OnTeleport();
         }

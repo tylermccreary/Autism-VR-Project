@@ -7,8 +7,10 @@ public class CartItemTracker : MonoBehaviour
     private List<Item> items;
     public List<Item> ItemsList { get { return items; } }
 
-    public delegate void CartContentsChangeEvent();
-    public static event CartContentsChangeEvent OnCartContentsChange;
+    public delegate void CartContentsAddEvent(Item item);
+    public static event CartContentsAddEvent OnCartContentsAdd;
+    public delegate void CartContentsDeleteEvent(Item item);
+    public static event CartContentsAddEvent OnCartContentsDelete;
 
     private void Awake() {
         items = new List<Item>();
@@ -18,6 +20,7 @@ public class CartItemTracker : MonoBehaviour
         Item item = other.gameObject.GetComponent<Item>();
         if (item != null) {
             items.Add(item);
+            OnCartContentsAdd(item);
         }
     }
 
@@ -25,6 +28,7 @@ public class CartItemTracker : MonoBehaviour
         Item item = other.gameObject.GetComponent<Item>();
         if (item != null) {
             items.Remove(item);
+            OnCartContentsDelete(item);
         }
     }
 }
