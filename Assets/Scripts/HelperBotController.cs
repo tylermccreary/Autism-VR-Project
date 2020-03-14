@@ -34,8 +34,10 @@ public class HelperBotController : MonoBehaviour
             } else {
                 navAgent.isStopped = true;
             }
-        } else {
 
+            if ((transform.position - navAgent.destination).magnitude < 1.5f) {
+                navAgent.isStopped = true;
+            }
         }
     }
 
@@ -43,6 +45,15 @@ public class HelperBotController : MonoBehaviour
         if (other.tag == Tag.PLAYER) {
             RotateTowardsPlayer();
             playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.tag == Tag.PLAYER) {
+            if (showingPlayer) {
+                RotateTowardsPlayer();
+                playerInRange = false; 
+            }
         }
     }
 
@@ -63,6 +74,8 @@ public class HelperBotController : MonoBehaviour
         if (showingPlayer) {
             if (Item.Equals(item, itemShowing)) {
                 showingPlayer = false;
+                navAgent.destination = originalPosition;
+                navAgent.isStopped = false;
             }
         }
     }

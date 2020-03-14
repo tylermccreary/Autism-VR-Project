@@ -39,7 +39,9 @@ public class ItemGrabArea : MonoBehaviour
     }
 
     private void Start() {
-        meshRenderer = signToHighlight.GetComponent<MeshRenderer>();
-        originalMaterial = meshRenderer.materials[0];
+        if (signToHighlight != null) {
+            meshRenderer = signToHighlight.GetComponent<MeshRenderer>();
+            originalMaterial = meshRenderer.materials[0];
+        }
     }
 }
