@@ -17,6 +17,10 @@ public class ItemGrabArea : MonoBehaviour
     }
 
     private void CheckSign(Item itemToHighlight, Transform areaTransform) {
+        if (signToHighlight == null) {
+            return;
+        }
+
         if (Item.Equals(item, itemToHighlight)) {
             Highlight();
         } else {
