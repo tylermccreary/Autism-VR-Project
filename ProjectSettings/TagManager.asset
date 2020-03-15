@@ -9,6 +9,8 @@ TagManager:
   - PickUpArea
   - BotSpawner
   - CheckoutLane
+  - CartArea
+  - CheckoutArea
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - PostProcessing
   - Floor
-  - 
+  - Checkout
   - 
   - 
   - 
