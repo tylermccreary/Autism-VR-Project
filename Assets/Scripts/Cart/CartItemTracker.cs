@@ -28,7 +28,7 @@ public class CartItemTracker : MonoBehaviour
         Item item = other.gameObject.GetComponent<Item>();
         if (item != null) {
             items.Remove(item);
-            //OnCartContentsDelete(item);
+            OnCartContentsDelete(item);
         }
     }
 }

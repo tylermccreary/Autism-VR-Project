@@ -80,7 +80,6 @@ public class BotShopperController : MonoBehaviour {
 
     private void CheckOut() {
         if (!laneSelected) {
-            Debug.Log("Select Lane");
             GameObject[] checkoutLanes = GameObject.FindGameObjectsWithTag(Tag.CHECKOUT_LANE);
             navMeshAgent.destination = checkoutLanes[Random.Range(0, checkoutLanes.Length)].transform.position;
             navMeshAgent.isStopped = false;
@@ -91,7 +90,6 @@ public class BotShopperController : MonoBehaviour {
             navMeshAgent.isStopped = true;
             timeCheckingOut += Time.deltaTime;
             if (timeCheckingOut > timeToCheckOut) {
-                Debug.Log("LEAVE");
                 state = StateEnum.Leaving;
                 timeCheckingOut = 0f;
             }

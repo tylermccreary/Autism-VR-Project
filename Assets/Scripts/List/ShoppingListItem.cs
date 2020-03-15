@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class ShoppingListItem : MonoBehaviour
 {
     [SerializeField] private Button button;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI tmpGUI;
+    [SerializeField] private TMP_Text text;
     [SerializeField] private Item item;
     [SerializeField] private int quantity;
     private string name;
@@ -16,6 +17,16 @@ public class ShoppingListItem : MonoBehaviour
     
     public delegate void ItemClickEvent(Item item, Transform areaTransform);
     public static event ItemClickEvent OnItemClickEvent;
+
+    private void OnEnable() {
+        CartItemTracker.OnCartContentsAdd += CheckItemInCart;
+        CartItemTracker.OnCartContentsDelete += CheckItemOutOfCart;
+    }
+
+    private void OnDisable() {
+        CartItemTracker.OnCartContentsAdd -= CheckItemInCart;
+        CartItemTracker.OnCartContentsDelete -= CheckItemOutOfCart;
+    }
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == Tag.FINGER && this.item != null) {
@@ -38,7 +49,7 @@ public class ShoppingListItem : MonoBehaviour
             }
         }
         
-        this.text.text = this.name;
+        this.tmpGUI.text = this.name;
         gameObject.SetActive(true);
     }
 
@@ -46,9 +57,46 @@ public class ShoppingListItem : MonoBehaviour
         return item;
     }
 
+    private void CheckItemInCart(Item item) {
+        if (Item.Equals(this.item, item)) {
+            DecrementQuantity();
+        }
+    }
+
+    private void CheckItemOutOfCart(Item item) {
+        if (Item.Equals(this.item, item)) {
+            IncrementQuantity();
+            Debug.Log("Increment");
+        }
+    }
+
     public void IncrementQuantity() {
         quantity += 1;
-        this.text.text = this.text.text;
-        this.text.text = this.name + " (" + quantity + ")";
+        if (quantity > 1) {
+            this.tmpGUI.text = this.name + " (" + quantity + ")";
+        } else {
+            this.tmpGUI.text = this.name;
+        }
+
+        if (quantity <= 0) {
+            this.text.fontStyle = FontStyles.Strikethrough;
+        } else {
+            this.text.fontStyle = FontStyles.Bold;
+        }
+    }
+
+    public void DecrementQuantity() {
+        quantity -= 1;
+        if (quantity > 1) {
+            this.tmpGUI.text = this.name + " (" + quantity + ")";
+        } else {
+            this.tmpGUI.text = this.name;
+        }
+
+        if (quantity <= 0) {
+            this.text.fontStyle = FontStyles.Strikethrough;
+        } else {
+            this.text.fontStyle = FontStyles.Bold;
+        }
     }
 }

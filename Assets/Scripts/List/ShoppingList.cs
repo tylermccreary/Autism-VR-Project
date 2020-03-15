@@ -10,7 +10,7 @@ public class ShoppingList : MonoBehaviour {
     private int count = 0;
 
     private void Start() {
-        listAmount = Random.Range(18, 21);
+        listAmount = Random.Range(12, 21);
         for (int i = 0; i < listAmount ; i++) {
             list.Add(buttons[i].GetComponent<ShoppingListItem>());
         }
@@ -25,7 +25,6 @@ public class ShoppingList : MonoBehaviour {
             GameObject objectSelected = objectsAvailable[objectIndex];
 
             ItemGrabArea itemSelected = objectSelected.GetComponent<ItemGrabArea>();
-            Debug.Log(itemSelected.item.Name);
 
             bool incremented = false;
             for (int j = 0; j < list.Count; j++) {
@@ -33,17 +32,16 @@ public class ShoppingList : MonoBehaviour {
                 if (listItem != null && Item.Equals(itemSelected.item, listItem)) {
                     list[j].IncrementQuantity();
                     incremented = true;
-                    Debug.Log("Incremented");
                     break;
                 }
             }
 
             if (!incremented) {
-                Debug.Log("Added: " + count);
                 list[count].SetUpListItem(itemSelected.item, 1, itemSelected.transform);
                 count++;
-                incremented = false;
             }
+
+            incremented = false;
         }
     }
 }
