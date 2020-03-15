@@ -35,12 +35,10 @@ public class GrabRelease : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == Tag.ITEM) {
-            Debug.Log("BAD: " + other.gameObject);
             if (itemToGrab == null && itemInHand == null) {
                 itemToGrab = other.gameObject;
             }
         } else {
-            Debug.Log("Good: " + other.gameObject);
             itemArea = other.gameObject.GetComponent<ItemGrabArea>();
         }
     }

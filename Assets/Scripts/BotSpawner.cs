@@ -22,14 +22,14 @@ public class BotSpawner : MonoBehaviour
     }
 
     private void Update() {
-        /*timeSinceLastSpawn += Time.deltaTime;
+        timeSinceLastSpawn += Time.deltaTime;
         if (timeSinceLastSpawn > spawnRate) {
             timeSinceLastSpawn = 0f;
             if (totalShoppersShopping < maxSpawnedAtOnce) {
                 int spawnIndex = Random.Range(0, spawnLocationsOutside.Length);
                 SpawnShopper(spawnLocationsOutside[spawnIndex]);
             }
-        }*/
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -49,6 +49,7 @@ public class BotSpawner : MonoBehaviour
 
     private void SpawnShopper(Transform locationTransform) {
         GameObject spawnedBot = Instantiate(botPrefab, locationTransform);
+        spawnedBot.transform.parent = null;
         NavMeshAgent agent = spawnedBot.GetComponent<NavMeshAgent>();
         agent.avoidancePriority = nextPriority;
         totalShoppersShopping += 1;
