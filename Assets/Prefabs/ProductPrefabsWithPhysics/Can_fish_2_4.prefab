@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 17
   itemType: 6
-  specific: 9
+  specific: 0
 --- !u!54 &2660964656061416001
 Rigidbody:
   m_ObjectHideFlags: 0

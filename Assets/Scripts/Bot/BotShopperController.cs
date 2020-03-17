@@ -7,6 +7,7 @@ public class BotShopperController : MonoBehaviour {
 
     [SerializeField] private NavMeshAgent navMeshAgent;
     [SerializeField] private Transform[] cartSpawnPositions;
+    [SerializeField] private GameObject cartObject;
 
     private enum StateEnum { SearchingForItem, GrabbingItem, CheckingOut, Leaving }
     private StateEnum state = StateEnum.SearchingForItem;
@@ -56,6 +57,12 @@ public class BotShopperController : MonoBehaviour {
                 break;
             default:
                 break;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == Tag.BOT_CART_AREA) {
+            ShowCart();
         }
     }
 
@@ -121,5 +128,9 @@ public class BotShopperController : MonoBehaviour {
             navMeshAgent.isStopped = false;
             itemGrabbed = false;
         }
+    }
+
+    public void ShowCart() {
+        cartObject.SetActive(true);
     }
 }

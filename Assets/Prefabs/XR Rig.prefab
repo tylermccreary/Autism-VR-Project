@@ -557,6 +557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: 1
+  meshRenderers:
+  - {fileID: 8380259006823010409}
+  - {fileID: 4612617863028591841}
 --- !u!1 &8380259007630610608
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: 0
+  meshRenderers:
+  - {fileID: 5645026863317793320}
 --- !u!1 &8380259008586766943
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +823,7 @@ MonoBehaviour:
   rightController: {fileID: 8380259007499494548}
   blackOutColor: {r: 0, g: 0, b: 0, a: 1}
   transparentColor: {r: 0, g: 0, b: 0, a: 0}
+  trolley: {fileID: 0}
 --- !u!114 &8380259008708297352
 MonoBehaviour:
   m_ObjectHideFlags: 0

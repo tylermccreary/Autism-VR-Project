@@ -11,6 +11,7 @@ TagManager:
   - CheckoutLane
   - CartArea
   - CheckoutArea
+  - BotCartArea
   layers:
   - Default
   - TransparentFX

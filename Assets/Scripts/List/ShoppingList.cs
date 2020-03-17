@@ -37,7 +37,7 @@ public class ShoppingList : MonoBehaviour {
             }
 
             if (!incremented) {
-                list[count].SetUpListItem(itemSelected.item, 1, itemSelected.transform);
+                list[count].SetUpListItem(itemSelected.item, 1, itemSelected);
                 count++;
             }
 

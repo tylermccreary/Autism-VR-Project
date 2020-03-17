@@ -324,6 +324,7 @@ MonoBehaviour:
   - {fileID: 580091412588914645}
   - {fileID: 7401232586477045150}
   - {fileID: 7404553659503678817}
+  cartObject: {fileID: 5382554284274678198}
   finishedShopping: 0
 --- !u!135 &7248546554570024925
 SphereCollider:
@@ -685,6 +686,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1050768427235832, guid: b071ec1ba49d7544ab9c57c01cbb70a5, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050768427235832, guid: b071ec1ba49d7544ab9c57c01cbb70a5, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693251659082366, guid: b071ec1ba49d7544ab9c57c01cbb70a5, type: 3}

@@ -12,10 +12,10 @@ public class ShoppingListItem : MonoBehaviour
     [SerializeField] private Item item;
     [SerializeField] private int quantity;
     private string name;
-    public Transform itemAreaTransform;
+    public ItemGrabArea itemGrabArea;
     private bool collected;
     
-    public delegate void ItemClickEvent(Item item, Transform areaTransform);
+    public delegate void ItemClickEvent(Item item, ItemGrabArea areaTransform);
     public static event ItemClickEvent OnItemClickEvent;
 
     private void OnEnable() {
@@ -30,14 +30,14 @@ public class ShoppingListItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == Tag.FINGER && this.item != null) {
-            OnItemClickEvent(this.item, itemAreaTransform);
+            OnItemClickEvent(this.item, itemGrabArea);
         }
     }
 
-    public void SetUpListItem(Item item, int quantity, Transform areaTransform) {
+    public void SetUpListItem(Item item, int quantity, ItemGrabArea itemGrabArea) {
         this.item = item;
         this.quantity = quantity;
-        this.itemAreaTransform = areaTransform;
+        this.itemGrabArea = itemGrabArea;
 
         if (item.ItemSpecific != ItemSpecificEnum.NA) {
             this.name = item.ItemSpecific.ToString() + " " + item.Name.ToString();

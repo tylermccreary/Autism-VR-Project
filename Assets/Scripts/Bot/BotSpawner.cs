@@ -43,16 +43,20 @@ public class BotSpawner : MonoBehaviour
     private void SpawnCurrentShoppers() {
         int amountToSpawn = Mathf.Min((int)(maxSpawnedAtOnce * 0.8f), spawnLocationsInside.Length);
         for (int i = 0; i < amountToSpawn; i++) {
-            SpawnShopper(spawnLocationsInside[i]);
+            GameObject spawnedBot = SpawnShopper(spawnLocationsInside[i]);
+            BotShopperController botShopperController = spawnedBot.GetComponent<BotShopperController>();
+            botShopperController.ShowCart();
         }
     }
 
-    private void SpawnShopper(Transform locationTransform) {
+    private GameObject SpawnShopper(Transform locationTransform) {
         GameObject spawnedBot = Instantiate(botPrefab, locationTransform);
         spawnedBot.transform.parent = null;
         NavMeshAgent agent = spawnedBot.GetComponent<NavMeshAgent>();
         agent.avoidancePriority = nextPriority;
         totalShoppersShopping += 1;
         nextPriority += 1;
+
+        return spawnedBot;
     }
 }

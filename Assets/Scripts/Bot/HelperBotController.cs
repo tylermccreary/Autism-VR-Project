@@ -34,10 +34,10 @@ public class HelperBotController : MonoBehaviour
             } else {
                 navAgent.isStopped = true;
             }
+        }
 
-            if ((transform.position - navAgent.destination).magnitude < 1.5f) {
-                navAgent.isStopped = true;
-            }
+        if ((transform.position - navAgent.destination).magnitude < 1.5f) {
+            navAgent.isStopped = true;
         }
     }
 
@@ -61,12 +61,12 @@ public class HelperBotController : MonoBehaviour
 
     }
 
-    private void ShowPlayer(Item item, Transform areaTransform) {
+    private void ShowPlayer(Item item, ItemGrabArea itemGrabArea) {
         if (playerInRange) {
             showingPlayer = true;
-            itemTransform = areaTransform;
+            itemTransform = itemGrabArea.transform;
             itemShowing = item;
-            navAgent.destination = areaTransform.position;
+            navAgent.destination = itemGrabArea.transform.position;
         }
     }
 

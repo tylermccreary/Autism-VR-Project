@@ -6,6 +6,7 @@ public class GrabRelease : MonoBehaviour {
 
     private enum HandEnum { Left, Right };
     [SerializeField] private HandEnum hand;
+    [SerializeField] private MeshRenderer[] meshRenderers;
 
     private GameObject itemToGrab;
     private GameObject itemInHand;
@@ -75,6 +76,9 @@ public class GrabRelease : MonoBehaviour {
                 itemInHandRigid = itemInHand.GetComponent<Rigidbody>();
                 itemInHandRigid.isKinematic = true;
                 //itemInHand.transform.parent = transform;
+                foreach(MeshRenderer renderer in meshRenderers) {
+                    renderer.enabled = false;
+                }
             }
         }
     }
@@ -88,6 +92,10 @@ public class GrabRelease : MonoBehaviour {
                 itemInHandRigid.isKinematic = false;
                 itemInHand.transform.parent = null;
                 itemInHand = null;
+            }
+
+            foreach (MeshRenderer renderer in meshRenderers) {
+                renderer.enabled = true;
             }
         }
     }
