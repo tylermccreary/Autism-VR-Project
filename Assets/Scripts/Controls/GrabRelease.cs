@@ -14,6 +14,8 @@ public class GrabRelease : MonoBehaviour {
     private bool itemIsCart = false;
 
     private ItemGrabArea itemArea;
+    private Vector3 prevPosition = Vector3.zero;
+    private Vector3 velocity = Vector3.zero;
     
     public delegate void CartGrabEvent();
     public static event CartGrabEvent OnCartGrab;
@@ -36,6 +38,11 @@ public class GrabRelease : MonoBehaviour {
             ViveInputController.OnButtonDownLeftTrigger -= Grab;
             ViveInputController.OnButtonUpLeftTrigger -= Release;
         }
+    }
+
+    private void Update() {
+        velocity = (transform.position - prevPosition) / Time.deltaTime;
+        prevPosition = transform.position;
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -91,6 +98,8 @@ public class GrabRelease : MonoBehaviour {
             } else {
                 itemInHandRigid.isKinematic = false;
                 itemInHand.transform.parent = null;
+                Debug.Log(velocity);
+                itemInHandRigid.velocity = velocity;
                 itemInHand = null;
             }
 
