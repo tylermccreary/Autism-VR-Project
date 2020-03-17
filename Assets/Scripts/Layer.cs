@@ -5,4 +5,5 @@ using UnityEngine;
 public class Layer
 {
     public const string CHECKOUT = "Checkout";
+    public const string TELEPORT_WALL = "TeleportWall";
 }

@@ -12,6 +12,9 @@ public class Teleport : MonoBehaviour
     [SerializeField] private Color blackOutColor;
     [SerializeField] private Color transparentColor;
     [SerializeField] private GameObject trolley;
+    [SerializeField] private Material wallLineMaterial;
+    [SerializeField] private Material teleportLineMaterial;
+    [SerializeField] private GameObject teleportSphereSpotter;
 
     private bool hasCart = false;
     private RaycastHit hit;
@@ -22,6 +25,8 @@ public class Teleport : MonoBehaviour
     private float blackOutTime = 0.0f;
     private float blackInTime = 0.0f;
     private float blackOutTimeNeeded = 0.1f;
+
+    private bool canTeleport = false;
 
 
     public delegate void TeleportEvent();
@@ -61,11 +66,21 @@ public class Teleport : MonoBehaviour
     private void UpdateTeleportLineRenderer() {
         if (teleport) {
             Ray ray = new Ray(rightController.transform.position, -rightController.transform.up);
-            if (Physics.Raycast(ray, out hit, 20, layerMask)) {
+            if (Physics.Raycast(ray, out hit, 50, layerMask)) {
                 if (hit.transform != null) {
                     lineRenderer.enabled = true;
                     lineRenderer.SetPosition(0, rightController.transform.position);
                     lineRenderer.SetPosition(1, hit.point);
+                    teleportSphereSpotter.transform.position = hit.point;
+                    if (hit.transform.gameObject.layer == LayerMask.NameToLayer(Layer.TELEPORT_WALL)) {
+                        lineRenderer.material = wallLineMaterial;
+                        canTeleport = false;
+                        teleportSphereSpotter.SetActive(false);
+                    } else {
+                        lineRenderer.material = teleportLineMaterial;
+                        canTeleport = true;
+                        teleportSphereSpotter.SetActive(true);
+                    }
                 } else {
                     lineRenderer.enabled = false;
                 }
@@ -81,12 +96,16 @@ public class Teleport : MonoBehaviour
     }
 
     private void TriggerTeleport() {
-        if (hasCart) {
+        teleportSphereSpotter.SetActive(false);
+        if (hasCart && canTeleport) {
             lineRenderer.enabled = false;
             teleport = false;
             blackOut = true;
             OnPrepareForTeleport();
             StartCoroutine(ExecuteTeleportation());
+        } else {
+            lineRenderer.enabled = false;
+            teleport = false;
         }
     }
 
