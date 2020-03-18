@@ -113,8 +113,14 @@ public class BotShopperController : MonoBehaviour {
         navMeshAgent.isStopped = true;
         Transform spawnPosition = cartSpawnPositions[Random.Range(0, cartSpawnPositions.Length)];
         GameObject spawnedItem = Instantiate(botShoppingList[currentItemIndex].itemGrabArea.gameObject.GetComponent<ItemGrabArea>().prefabToSpawn, spawnPosition);
+        StartCoroutine(FreezeItem(spawnedItem));
         //spawnedItem.transform.parent = null;
         itemGrabbed = true;
+    }
+
+    private IEnumerator FreezeItem(GameObject item) {
+        yield return new WaitForSeconds(1);
+        item.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     private void NextItem() {

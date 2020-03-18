@@ -59,7 +59,7 @@ public class CartController : MonoBehaviour
         List<Item> itemList = cartItemTracker.ItemsList;
         foreach (Item item in itemList) {
             item.transform.parent = null;
-            item.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            //item.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

@@ -99,7 +99,7 @@ public class GrabRelease : MonoBehaviour {
                 itemInHandRigid.isKinematic = false;
                 itemInHand.transform.parent = null;
                 Debug.Log(velocity);
-                itemInHandRigid.velocity = velocity;
+                itemInHandRigid.velocity = velocity * 2;
                 itemInHand = null;
             }
 
